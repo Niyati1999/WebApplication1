@@ -1,0 +1,23 @@
+﻿@model List<Student>
+@{
+    ViewData["Title"] = "StudentList";
+}
+
+<h1>StudentList</h1>
+<div class="container">
+    <div class="card">
+        <div class="card-header">List of Students</div>
+        <div class="card-body">
+            <ul>
+                <li style="color:black; font-style:initial">Student-Id | Student-Name | Student-Marks</li>
+            </ul>
+            <ol>
+            @foreach (var item in Model)
+            {
+                <li style="color:crimson; font-family:cursive">@item.Id | @item.Name | @item.Marks</li>
+            }
+                </ol>
+        </div>
+    </div>
+</div>
+

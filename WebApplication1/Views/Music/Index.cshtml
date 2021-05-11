@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">Select anyone</div>
+        <form asp-controller="Music" asp-action="Details" method="get">
+        <div class="card-body">
+            <ul>
+                <li><a asp-controller="Music" asp-action="AddMethod">Add Album</a></li>
+                <li><a asp-controller="Music" asp-action="GetList">List of Albums</a></li>
+                <li><a asp-controller="Music" asp-action="SearchAlbum">Find Album</a></li>
+                @*<li><a asp-controller="Music" asp-action="Details">Details</a></li>*@
+            </ul>
+            <input type="text" name="Id" placeholder="Enter Id"/>
+            <input type="submit" name="Searchby"value="Search by ID"/> 
+            <div>
+                <input type="text" name="Category" placeholder="Enter Category" />
+                <input type="submit" name="Searchby"value="Search by Category" />
+            </div>
+        </div>
+            </form>
+        <div class="card-footer"></div>
+    </div>
+</div>

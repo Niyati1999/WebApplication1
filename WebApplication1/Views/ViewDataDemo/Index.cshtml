@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+@{ var address = ViewData["Address"] as Address;
+    var semester = ViewData["Semester"] as int?;
+    }
+<div class="row">
+    <div class="col-md-12">
+        <p>Name of My Friend is : @ViewData["Name"]</p><hr>
+        <p>Semester : @semester</p><hr>
+        <p>Grade : @ViewData["Grade"]</p>
+        <p>Subject : @ViewData["subject"]</p>
+        <p>Address : @address.City</p>
+        <p>Address : @address.State</p>
+        <p>Address : @address.Country</p>
+    </div>
+</div>
+

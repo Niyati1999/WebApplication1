@@ -1,0 +1,17 @@
+﻿@model List<Album>
+@{
+    ViewData["Title"] = "GetList";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">List of Music Types</div>
+        <div class="card-body">
+            @foreach (var item in Model)
+            {
+                <h3 style="color:mediumvioletred; font-size:large; tab-size:inherit"> Id:@item.Id  Name:@item.Name   Type:@item.Type   Singer:@item.isSinger Sound:@item.Sound </h3>
+            }
+        </div>
+        <div class="card-footer">End of the List</div>
+    </div>
+</div>

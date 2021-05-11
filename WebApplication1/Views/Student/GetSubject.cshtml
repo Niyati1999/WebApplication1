@@ -1,0 +1,25 @@
+﻿@model List<Subject>
+@{
+    ViewData["Title"] = "GetSubject";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">Choice for Subjects</div>
+        <div class="card-body">
+            <ul style="color:darkmagenta; font-size:30px; font-family:'Ink Free'">
+                @foreach (var item in Model)
+                {
+                    <li>@item.SubjectId - @item.SubjectName</li>
+                }
+
+
+            </ul>
+        </div>
+        <div class="card-footer">
+            <input type="text" placeholder="Enter your choice here" /><hr />
+            <input type="button" value="Select" id="btn_1" />
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">Demo Page</div>
+        <div class="card-body">
+            <div class="row col-md-12">
+                <p>@DateTime.Now</p>
+            </div>
+            <div class="row col-md-12">
+                <p>2015 is a leap year? @DateTime.IsLeapYear(2015)</p>
+            </div>
+            <div class="row col-md-12">
+                <ul>
+                    @for (int i = 1; i <= 10; i++)
+                    {
+                        @if (i % 2 == 0)
+                        {
+                            <li style="color:green; font-size:large" >Value of i is @i ->Even</li>
+                        }
+                        else {
+                            <li style="color:red; font-size:small">Value of i is @i ->Odd</li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+

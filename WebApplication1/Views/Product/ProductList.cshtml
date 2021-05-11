@@ -1,0 +1,36 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "ProductList";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">Product List
+        <p>Total Products = @Model.Count</p>
+        </div>
+        <div class="card-body">
+            <ul>
+                @*<li>101 - Dettol</li>
+            <li>102 - Cinthol Lime</li>
+            <li>103 - Dove</li>
+            <li>104 - Pears</li>
+            <li>105 - Santoor</li>*@
+                @foreach (var item in Model)
+                {
+
+                    <li>@item.Id - @item.Name - Rs.@item.Rate - @item.ImagePath 
+                    <img src =@item.ImagePath width="100"/>
+                    @*<img src ="/Images/dettol.jpeg" />*@
+                </li>
+
+                }
+            </ul>
+            @*<img src="~/Images/dettol.jpeg" />
+            <img src="~/Images/cinthollime.jpeg" />
+            <img src="~/Images/Dove.jpeg" />
+            <img src="~/Images/Pears.jpeg" />
+            <img src="~/Images/santoor.jpeg" />*@
+        </div>
+    </div>
+</div>
+
